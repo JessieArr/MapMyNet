@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Click="NetworkInterfaces_Click">Network Interfaces</Button>
+        <Button Grid.Row="1" Click="mDNS_Click">mDNS</Button>
+        <Button Grid.Row="2" Click="IPv4_Click">IPv4</Button>
+        <ContentControl x:Name="MainContent" Grid.Column="1" Grid.RowSpan="4"></ContentControl>
     </Grid>
 </Window>
